@@ -18,7 +18,7 @@ double estimate_pi_monte_carlo(long long N, int block_size = 10000000) {
     long long processed = 0;
     
     while (processed < N) {
-        long long current_block = min(block_size, N - processed);
+        long long current_block = min((long long)block_size, N - processed);
         long long block_inside = 0;
         
         for (long long i = 0; i < current_block; i++) {
